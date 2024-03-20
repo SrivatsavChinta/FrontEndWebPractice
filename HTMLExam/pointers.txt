@@ -1,0 +1,6 @@
+1. What changed in HTML5
+2. Name any 4 semantic tags in HTML
+3. Difference between aside and article tags
+4. Why use semantic tags instead of div tags
+5. What is role in accessibility
+6. What is an iframe tag; Use of iframe and why not anchor tag instead of iframe
