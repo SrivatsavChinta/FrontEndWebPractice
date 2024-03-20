@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><HTML2.0</HTML2></title>
+    <style>
+        thead{
+            background-color: black;
+            color: white;
+        }
+        td{
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <!-- superscript and subscript -->
+    <h1 id="main-page">Main Page</h1>
+    <h2>Monday, 18<sup>th</sup> of March</h2>
+    <h3>Drink a lot of H<sub>2</sub>O</h3>
+    <hr>
+
+    <!-- The HTML <strong> tag is used semantically to emphasize importance, conveying meaning to both sighted and 
+        screen readers. In contrast, the <b> tag is solely for visual presentation, making text bold without 
+        conveying significance.-->
+    <h3>Strong, Bold and Italics</h3>
+    <p>
+        <!-- strong emphasises the text to bold -->
+        Hello, <strong>Wassup?</strong>
+    </p>
+
+    <p>
+        <!-- the bold tag bolds the element -->
+        <b>Hola <em>Amigo!</em></b>
+    </p>
+
+    <p>
+        <!-- idiomatic for special terms -->
+        <i>Mitochondria</i> is the powerhouse of the cell!
+    </p>
+    <hr>
+
+    <!-- Lists in HTML: 1.Unordered 2.Ordered -->
+    <h3>Lists Section</h3>
+    <p>Improper Way to nest the lists</p>
+    <ul>
+        <li>This is an Unordered List</li>
+        <li>This is an Unordered List</li>
+        <ul>
+            <li>This is an Unordered List Nested</li>
+            <li>This is an Unordered List Nested</li>
+            <ol>
+                <li>This is an Ordered List Nested</li>
+                <li>This is an Ordered List Nested</li>
+            </ol>
+        </ul>
+    </ul>
+    <ol>
+        <li>This is an Ordered List</li>
+        <li>This is an Ordered List</li>
+        <ol>
+            <li>This is an Ordered List Nested</li>
+            <li>This is an Ordered List Nested</li>
+            <ul>
+                <li>This is an Unordered List Nested</li>
+                <li>This is an Unordered List Nested</li>
+            </ul>
+        </ol>
+    </ol>
+
+    <p>The proper method of listing is listing into the li tag</p>
+    <ul>
+        <li>
+            Hot beverages
+            <ol>
+                <li>Tea</li>
+                <li>Coffee</li>
+            </ol>
+        </li>
+        <li>
+            Cold Beverages
+            <ol>
+                <li>Milkshake</li>
+                <li>Cold Coffee</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+
+    <!-- 
+        Anchor tags to redirect to other pages or other html documents
+        Can also use image to be clickable and redirect to other pages or documents
+     -->
+    <h3>Links and Images</h3>
+    <p>Using the img src and href to present urls and images</p>
+    <ul>
+        <li>
+            <a href="https://www.google.com/" target="_main"> Click on this to open google in a new tab</a>
+        </li>
+        <li>
+            <p>Salvatore Leone</p>
+            <!-- put img src in an acnhor tag and image becomes clickable -->
+            <a href="./about.html" target="_main"><img src="./images/salvatoreartwork.jpg" alt="Salvatore Leone"></a>
+        </li>
+    </ul>
+    <p>Can also link to other html pages</p>
+    <a href="./about.html"> About Salvatore Leone</a>
+    <p>You can click on Salvatore Leone Image to direct to about page</p>
+    <!-- use "mailto:" to open the mailer -->
+    <a href="mailto:salvatoreleone@gtalcs.com">Mail Salvatore</a>
+    <p>Anchor tags can be used to direct within page elements using the id property (use #before the id in href)</p>
+    <a href="#main-page">Main Page</a>
+    <hr>
+
+    <!-- 
+        HTML tables: info displayed in rows and cols
+        tr-> tabl row; td-> table data, th & tb -> table head and body
+        some css is used to style the sheets
+     -->
+    <h3>HTML Tables</h3>
+    <table> 
+        <!-- colspan spans the data across columns -->
+        <caption>
+            Grocery List 
+        </caption>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price per item</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Soaps</td>
+                <td>2</td>
+                <td>$2</td>
+                <td>$4</td>
+            </tr>
+            <tr>
+                <td>pens</td>
+                <td>4</td>
+                <td>$3</td>
+                <td>$12</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    Sub Total
+                </td>
+                <td>
+                    $16
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <!-- 
+        HTML Forms
+        input tag is used with a type attribute such as text
+     -->
+    <h3>HTML Forms</h3>
+    <form action="/login">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password" required>
+        <button>Log Me In</button>
+    </form>
+    <input type="text" name="city">
+    <button>Generic Button</button>
+    <!-- 
+        for email it must be a proper email with @
+        for url it needs full url along with https
+        for number it will not accept letter inputs
+         -->
+        <label for="email">Email:</label>
+        <input type="email" placeholder="email" id="email">
+    </form>
+    <!-- the name and required attributes -->
+    <h4>Input Elements</h4>
+    <form action="">
+        <input type="email" placeholder="email">
+        <input type="url" placeholder="url">
+        <input type="number" placeholder="number">
+        <button>Submit</button>
+        <br>
+        <!-- 
+            for labels use for attribute to match labels
+         -->
+        <label for="email">Email:</label>
+        <input type="email" placeholder="email" id="email">
+    </form>
+    <!-- the name and required attributes -->
+    <h4>Name and required</h4>
+    <form action="">
+        <label for="state">State:</label>
+        <input type="text" name="state" id="state">
+        <button>Submit</button>
+        <!-- 
+            if I put CA (California) in name attribute
+            output: http://127.0.0.1:5500/FrontEndWebPractice/HTML2.0/index.html?state=CA
+         -->
+    </form>
+    <hr>
+
+    <!-- 
+        More about forms
+     -->
+    <h3>HTML Forms 2.0</h3>
+    <!-- text area -->
+    <h4>Text Area</h4>
+    <form action="">
+        <label for="notes">Additional Notes:</label>
+        <textarea name="" id="notes" cols="50" rows="10"></textarea>
+    </form>
+    <!-- check boxes -->
+    <h4>Check Boxes</h4>
+    <form action="">
+        <input type="text" placeholder="username">
+        <div>
+            <label for="subscribe">Subscribe to newsletter</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+        </div>
+        <button>Submit</button>
+        <!-- 
+            upon checking : http://127.0.0.1:5500/FrontEndWebPractice/HTML2.0/index.html?subscribe=on
+         -->
+    </form>
+    <!-- Range Input(slider) -->
+    <h4>Range Input</h4>
+    <form action="">
+        <label for="volume" id="volume">Select Volume</label>    
+        <input type="range" min="0" max="5" name="volume" value="5">
+        <button>Submit</button>
+        <!-- 
+            output in url: http://127.0.0.1:5500/FrontEndWebPractice/HTML2.0/index.html?volume=2
+         -->
+    </form>
+    <!-- Selects -->
+    <h4>Selects</h4>
+    <form action="">
+        <!-- options are used for selects -->
+        <label for="skill-level">Select your skill level</label>
+        <select name="skill-level" id="skill-level">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+        </select>
+        <button>Submit</button>
+    </form>
+    <!-- Radio Button -->
+    <h4>Radio Button</h4>
+    <form action="">
+        <!-- Radio Buttons are connected and grouped by name attribute -->
+        <!-- Field set groups the below -->
+        <!-- Disabled disables the selection -->
+        <fieldset disabled>
+            <legend>Pick Shirt Size</legend>
+            <div>
+                <input type="radio" name="size" id="small" value="S">
+                <label for="small">Small</label>
+            </div>
+            <div>
+                <input type="radio" name="size" id="medium" value="M">
+                <label for="medium">Medium</label>
+            </div>
+            <div>
+                <input type="radio" name="size  " id="large" value="L">
+                <label for="large">Large</label>
+            </div>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+    <hr>
+
+    <!-- 
+        Semantic Elements and Multimedia 
+        Semantic means html tags say something about the meaning of the content
+    -->
+    <h3>Semantic and Multimedia</h3>
+    <!-- 
+        Span element : generic inline elements; can be modified in CSS
+    -->
+    <p>Lorem ipsum, <span>dolor</span> sit amet consectetur adipisicing elit. 
+        Perspiciatis voluptate quidem impedit odio recusandae inventore, 
+        necessitatibus numquam mollitia officiis iusto natus voluptatem neque, 
+        molestiae in incidunt labore, dolorem obcaecati ipsa.
+    </p>
+
+
+
+
+</body>
+</html>
