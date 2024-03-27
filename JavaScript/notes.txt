@@ -1,0 +1,8 @@
+// 'use strict'
+let hasDriversLicense = false
+const passTest = true
+if(passTest) hasDriverLicense = true
+if(hasDriversLicense) console.log('I can drive!')
+
+upon using strict mode, the console threw an error, if the strict mode is not activated then the console gives nothing
+
